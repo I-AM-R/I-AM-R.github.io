@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="./gg.png">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="keywords" content="sortable, reorder, list, javascript, html5, drag and drop, dnd, animation, groups, dnd, sortableJS"/>
+		<meta name="description" content="Sortable — is a JavaScript library for reorderable drag-and-drop lists on modern browsers and touch devices. No jQuery required. Supports Meteor, AngularJS, React, Polymer, Vue, Knockout and any CSS library, e.g. Bootstrap."/>
+		<title>移动端拖动排序</title>
+		<style type="text/css">
+			.container{
+				width: 100%;
+				background: white;
+			}
+			.row{
+				width: 100%;
+				
+			}
+			.list-group{
+				width: 100%;
+				border-top: 1px solid #F0F8F9;
+				height: 500px;
+			}
+			.list-group-item{
+				widows: 100%;
+				height: 100px;
+				background: white;
+				line-height: 100px;
+				border-bottom: 1px solid #F0F8F9;
+				color: #000;
+				font-size: 50px;
+				margin-bottom: 5px;
+			}
+			.blue-background-class{
+				background: #008FFF;
+			}
+			.red-background-class{
+				background: #008FFF;
+			}
+			.hfsjfsaf{
+				width: 50px;
+				height: 50px;
+				margin-left: 10px;
+				margin-right: 10px;
+				display: inline-block;
+				background: #0065F3;
+				color: white;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 50px;
+			}
+			#ddddds{
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				font-size: 45px;
+				color: #000;
+				text-align: center;
+				/*display: block;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ddddds">请拖动排序</div>
+		<div class="container" id="app">
+		<div id="simple-list" class="row">
+			<div id="example1" class="list-group col">
+				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 1</div>
+				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 2</div>
+				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 3</div>
+				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 4</div>
+				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 5</div>
+				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 6</div>
+			</div>
+		</div>
+
+    <!--https://segmentfault.com/a/1190000008209715#articleHeader5-->
+
+	</div>
+
+	<script src="./Sortable.js"></script>
+	<script src="./wapp.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var vv = document.getElementsByClassName("hfsjfsaf");
+			var bigDiv = document.getElementsByClassName("list-group-item");
+			for (let i=0;i<bigDiv.length;i++){
+				vv[i].innerHTML = i+1;
+				bigDiv[i].ontouchend = function(){
+					for(var j =0 ;j<vv.length;j++){
+						vv[j].innerHTML = j+1;
+					}
+				}
+			}
+			
+		}
+		
+		
+
+	</script>
+	</body>
+</html>
