@@ -20,7 +20,7 @@
 			.list-group{
 				width: 100%;
 				border-top: 1px solid #F0F8F9;
-				height: 500px;
+				/*height: 500px;*/
 			}
 			.list-group-item{
 				widows: 100%;
@@ -57,47 +57,47 @@
 				font-size: 45px;
 				color: #000;
 				text-align: center;
-				/*display: block;*/
+				display: block;
+			}
+			body{
+				width: 100%;
+				height: 800px;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="ddddds">请拖动排序</div>
+		
 		<div class="container" id="app">
-		<div id="simple-list" class="row">
-			<div id="example1" class="list-group col">
-				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 1</div>
-				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 2</div>
-				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 3</div>
-				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 4</div>
-				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 5</div>
-				<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 6</div>
+			<div id="simple-list" class="row">
+				<div id="example1" class="list-group col">
+					<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 1</div>
+					<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 2</div>
+					<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 3</div>
+					<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 4</div>
+					<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 5</div>
+					<div class="list-group-item" ><div class="hfsjfsaf"></div>Item 6</div>
+				</div>
 			</div>
+	    <!--https://segmentfault.com/a/1190000008209715#articleHeader5-->
 		</div>
-
-    <!--https://segmentfault.com/a/1190000008209715#articleHeader5-->
-
-	</div>
-
-	<script src="./Sortable.js"></script>
-	<script src="./wapp.js"></script>
-	<script type="text/javascript">
-		window.onload = function(){
-			var vv = document.getElementsByClassName("hfsjfsaf");
-			var bigDiv = document.getElementsByClassName("list-group-item");
-			for (let i=0;i<bigDiv.length;i++){
-				vv[i].innerHTML = i+1;
-				bigDiv[i].ontouchend = function(){
-					for(var j =0 ;j<vv.length;j++){
-						vv[j].innerHTML = j+1;
+	
+		<script src="./Sortable.js"></script>
+		<script src="./wapp.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var vv = document.getElementsByClassName("hfsjfsaf");
+				var bigDiv = document.getElementsByClassName("list-group-item");
+				for (let i=0;i<bigDiv.length;i++){
+					vv[i].innerHTML = i+1;
+					bigDiv[i].ontouchend = function(){
+						for(var j =0 ;j<vv.length;j++){
+							vv[j].innerHTML = j+1;
+						}
 					}
 				}
+				
 			}
-			
-		}
-		
-		
-
-	</script>
+		</script>
 	</body>
 </html>
